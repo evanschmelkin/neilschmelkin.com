@@ -51,5 +51,4 @@ User-agent: YouBot
 User-agent: Diffbot
 Allow: /
 
-# Sitemap: uncomment once https://neilschmelkin.com/sitemap.xml actually exists
-# Sitemap: https://neilschmelkin.com/sitemap.xml
+Sitemap: https://neilschmelkin.com/sitemap.xml
