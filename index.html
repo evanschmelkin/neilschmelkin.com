@@ -29,66 +29,210 @@
   <!-- 9/18/2026 canonical tag -->
   <link rel="canonical" href="https://neilschmelkin.com/">
 
-
-  <!-- Structured data: Person -->
+  <!-- Structured data (JSON-LD): replace BOTH existing ld+json blocks in <head> with this one block -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Neil Schmelkin",
-      "jobTitle": "Professional Engineer (PE)",
-      "url": "https://neilschmelkin.com/",
-      "telephone": "+1-516-236-4112",
-      "email": "n2moe@aol.com",
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Professional Engineer License",
-        "identifier": "068259",
-        "recognizedBy": {
-          "@type": "Organization",
-          "name": "New York State Education Department"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://neilschmelkin.com/#website",
+          "url": "https://neilschmelkin.com/",
+          "name": "Neil Schmelkin, PE",
+          "description": "Structural engineering, building inspections, and forensic engineering in New York City and Long Island.",
+          "inLanguage": "en-US",
+          "publisher": { "@id": "https://neilschmelkin.com/#business" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://neilschmelkin.com/#business",
+          "name": "Neil Schmelkin, PE",
+          "url": "https://neilschmelkin.com/",
+          "telephone": "+1-516-236-4112",
+          "email": "n2moe@aol.com",
+          "priceRange": "$$",
+          "description": "NYS-licensed and insured structural engineer and building inspector with over 25 years of experience, providing residential and commercial inspections, forensic engineering, expert witness testimony, property condition assessments, and structural design across the New York metropolitan area.",
+          "image": [
+            "https://neilschmelkin.com/assets/img/engineerhat.webp",
+            "https://neilschmelkin.com/assets/img/crop-architect-opening-blueprint.jpg"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Great Neck",
+            "addressRegion": "NY",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            { "@type": "City", "name": "New York City" },
+            { "@type": "AdministrativeArea", "name": "Manhattan" },
+            { "@type": "AdministrativeArea", "name": "Brooklyn" },
+            { "@type": "AdministrativeArea", "name": "Queens" },
+            { "@type": "AdministrativeArea", "name": "The Bronx" },
+            { "@type": "AdministrativeArea", "name": "Staten Island" },
+            { "@type": "AdministrativeArea", "name": "Nassau County" },
+            { "@type": "AdministrativeArea", "name": "Long Island" },
+            { "@type": "AdministrativeArea", "name": "Westchester County" }
+          ],
+          "founder": { "@id": "https://neilschmelkin.com/#neil" },
+          "knowsAbout": [
+            "Structural engineering",
+            "Building inspections",
+            "Forensic engineering",
+            "Expert witness testimony",
+            "Property condition assessments",
+            "Phase I environmental assessments",
+            "Radon testing",
+            "Lead in water",
+            "Lead in building materials",
+            "Water infiltration",
+            "Mold evaluation",
+            "Concrete, steel, and timber design"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Engineering and inspection services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural Inspections",
+                  "description": "Structural inspections of residential and commercial buildings by a licensed Professional Engineer."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Forensic Engineering",
+                  "description": "Engineering investigation of structural conditions and building failures."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Expert Witness Testimony",
+                  "description": "Expert witness testimony on structural and building engineering matters."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural Consultation",
+                  "description": "Structural engineering consulting for property owners, buyers, and attorneys."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural Design",
+                  "description": "Structural design for buildings using concrete, steel, and timber."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Permits, Plans, and Expediting",
+                  "description": "Assistance with building permits, plans, and expediting services in New York City and Long Island."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Property Condition Assessments",
+                  "description": "Property condition assessments (PCA) for commercial and residential properties."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Phase I Environmental Assessments",
+                  "description": "Phase I environmental assessments of properties."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lead in Water Assessments",
+                  "description": "Assessment for lead in drinking water."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lead in Building Material Assessments",
+                  "description": "Assessment for lead in building materials."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Radon Testing",
+                  "description": "Radon testing as part of structural inspections."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Water Infiltration and Mold Evaluation",
+                  "description": "Engineering evaluation of water infiltration and mold."
+                }
+              }
+            ]
+          },
+          "sameAs": [
+            "https://www.homeadvisor.com/rated.NeilBSchmelkin.65059466.html",
+            "https://www.alignable.com/great-neck-ny/neil-schmelkin-pe-structural-engineer",
+            "https://www.yelp.com/biz/complete-building-inspections-great-neck"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://neilschmelkin.com/#neil",
+          "name": "Neil Schmelkin",
+          "jobTitle": "Professional Engineer (PE)",
+          "description": "New York State licensed Professional Engineer with over 25 years of experience in structural engineering, building inspections, and forensic engineering.",
+          "url": "https://neilschmelkin.com/",
+          "image": "https://neilschmelkin.com/assets/img/engineerhat.webp",
+          "telephone": "+1-516-236-4112",
+          "email": "n2moe@aol.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Great Neck",
+            "addressRegion": "NY",
+            "addressCountry": "US"
+          },
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional Engineer License",
+            "identifier": "068259",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "New York State Education Department"
+            }
+          },
+          "knowsAbout": [
+            "Structural engineering",
+            "Forensic engineering",
+            "Building inspections",
+            "Expert witness testimony"
+          ],
+          "worksFor": { "@id": "https://neilschmelkin.com/#business" },
+          "sameAs": [
+            "https://www.linkedin.com/in/neil-schmelkin-6454329/",
+            "https://www.facebook.com/neil.schmelkin/"
+          ]
         }
-      },
-      "worksFor": {
-        "@type": "ProfessionalService",
-        "name": "Neil Schmelkin, PE"
-      }
-    }
-  </script>
-
-  <!-- Structured data: ProfessionalService -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://neilschmelkin.com/",
-      "name": "Neil Schmelkin, PE",
-      "url": "https://neilschmelkin.com/",
-      "telephone": "+1-516-236-4112",
-      "email": "n2moe@aol.com",
-      "priceRange": "$$",
-      "description": "NYS-licensed structural engineer and building inspector providing residential and commercial inspections, forensic engineering, expert witness testimony, and structural design across the New York metropolitan area.",
-      "areaServed": [
-        {"@type": "City", "name": "New York City"},
-        {"@type": "AdministrativeArea", "name": "Manhattan"},
-        {"@type": "AdministrativeArea", "name": "Brooklyn"},
-        {"@type": "AdministrativeArea", "name": "Queens"},
-        {"@type": "AdministrativeArea", "name": "The Bronx"},
-        {"@type": "AdministrativeArea", "name": "Staten Island"},
-        {"@type": "AdministrativeArea", "name": "Long Island"},
-        {"@type": "AdministrativeArea", "name": "Westchester County"}
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Neil Schmelkin"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/neil-schmelkin-6454329/",
-        "https://www.homeadvisor.com/rated.NeilBSchmelkin.65059466.html",
-        "https://www.alignable.com/great-neck-ny/neil-schmelkin-pe-structural-engineer",
-        "https://www.facebook.com/neil.schmelkin/",
-        "https://www.yelp.com/biz/complete-building-inspections-great-neck"
-
       ]
     }
   </script>
